@@ -276,7 +276,7 @@ public class AppManager {
     /**
      * 关闭所有activity
      */
-    public void killAll() {
+    private void killAll() {
 //        while (getActivityList().size() != 0) { //此方法只能兼容LinkedList
 //            getActivityList().remove(0).finish();
 //        }
@@ -293,7 +293,7 @@ public class AppManager {
     /**
      * 退出应用程序
      */
-    public void AppExit() {
+    private void AppExit() {
         try {
             killAll();
             if (mActivityList != null)

@@ -50,6 +50,7 @@ ext {
             "numberprogressbar"        : "com.daimajia.numberprogressbar:library:1.2@aar",
             "nineoldandroids"          : "com.nineoldandroids:library:2.4.0",
             "paginate"                 : "com.github.markomilos:paginate:0.5.1",
+            "spinkit"                  : "com.github.ybq:Android-SpinKit:1.1.0",
 
 
             //rx2

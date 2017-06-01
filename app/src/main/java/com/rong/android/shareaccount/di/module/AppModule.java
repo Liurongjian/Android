@@ -2,8 +2,6 @@ package com.rong.android.shareaccount.di.module;
 
 import android.app.Application;
 
-import org.simple.eventbus.EventBus;
-
 import javax.inject.Singleton;
 
 import dagger.Module;
@@ -27,9 +25,4 @@ public class AppModule {
 		return mApplication;
 	}
 
-	@Singleton
-	@Provides
-	public EventBus provideEventbus() {
-		return EventBus.getDefault();
-	}
 }

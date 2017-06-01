@@ -9,6 +9,8 @@ import com.rong.android.shareaccount.http.UserService;
 import com.rong.common.arms.lifecycle.ActivityLifecycle;
 import com.rong.common.arms.lifecycle.AppManager;
 import com.rong.common.di.module.HttpModule;
+import com.rong.common.di.module.UtilModule;
+import com.rong.common.utils.ProgressUtil;
 
 import org.simple.eventbus.EventBus;
 
@@ -21,13 +23,14 @@ import dagger.Component;
  */
 
 @Singleton
-@Component(modules = {AppModule.class, HttpModule.class, ApiModule.class})
+@Component(modules = {AppModule.class, HttpModule.class, ApiModule.class, UtilModule.class})
 public interface AppComponent {
 	Application Application();
 	UserService userService();
 	AppManager appManager();
 	ActivityLifecycle activityLifecycle();
 	EventBus eventBus();
+	ProgressUtil progressUtil();
 
 	void inject(BaseApplication app);
 }

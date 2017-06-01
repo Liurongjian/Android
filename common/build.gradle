@@ -36,6 +36,7 @@ dependencies {
 
     //view
     annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+    compile rootProject.ext.dependencies["spinkit"]
     compile (rootProject.ext.dependencies["butterknife"]){
         exclude module: 'support-annotations'
     }
