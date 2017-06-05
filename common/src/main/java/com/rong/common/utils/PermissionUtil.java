@@ -1,6 +1,7 @@
 package com.rong.common.utils;
 
 import android.Manifest;
+import android.app.Activity;
 
 import com.rong.common.arms.mvp.IView;
 import com.rong.common.arms.mvp.MessageType;
@@ -50,8 +51,9 @@ public class PermissionUtil {
     /**
      * 请求摄像头权限
      */
-    public static void launchCamera(final RequestPermission requestPermission, RxPermissions rxPermissions, final IView view) {
+    public static void launchCamera(final RequestPermission requestPermission, Activity activity, final IView view) {
 
+        RxPermissions rxPermissions = new RxPermissions(activity);
         //先确保是否已经申请过摄像头，和写入外部存储的权限
         boolean isPermissionsGranted =
                 rxPermissions
@@ -84,7 +86,9 @@ public class PermissionUtil {
     /**
      * 请求外部存储的权限
      */
-    public static void externalStorage(final RequestPermission requestPermission, RxPermissions rxPermissions, final IView view) {
+    public static void externalStorage(final RequestPermission requestPermission, Activity activity, final IView view) {
+
+        RxPermissions rxPermissions = new RxPermissions(activity);
         //先确保是否已经申请过摄像头，和写入外部存储的权限
         boolean isPermissionsGranted =
                 rxPermissions
@@ -113,8 +117,10 @@ public class PermissionUtil {
     /**
      * 请求发送短信权限
      */
-    public static void sendSms(final RequestPermission requestPermission, RxPermissions rxPermissions, final IView view) {
-//先确保是否已经申请过权限
+    public static void sendSms(final RequestPermission requestPermission, Activity activity, final IView view) {
+
+        RxPermissions rxPermissions = new RxPermissions(activity);
+        //先确保是否已经申请过权限
         boolean isPermissionsGranted =
                 rxPermissions
                         .isGranted(Manifest.permission.SEND_SMS);
@@ -141,8 +147,10 @@ public class PermissionUtil {
     /**
      * 请求打电话权限
      */
-    public static void callPhone(final RequestPermission requestPermission, RxPermissions rxPermissions, final IView view) {
-//先确保是否已经申请过权限
+    public static void callPhone(final RequestPermission requestPermission, Activity activity, final IView view) {
+
+        RxPermissions rxPermissions = new RxPermissions(activity);
+        //先确保是否已经申请过权限
         boolean isPermissionsGranted =
                 rxPermissions
                         .isGranted(Manifest.permission.CALL_PHONE);
@@ -169,8 +177,9 @@ public class PermissionUtil {
     /**
      * 请求获取手机状态的权限
      */
-    public static void readPhonestate(final RequestPermission requestPermission, RxPermissions rxPermissions, final IView view) {
-//先确保是否已经申请过权限
+    public static void readPhonestate(final RequestPermission requestPermission, Activity activity, final IView view) {
+        RxPermissions rxPermissions = new RxPermissions(activity);
+        //先确保是否已经申请过权限
         boolean isPermissionsGranted =
                 rxPermissions
                         .isGranted(Manifest.permission.READ_PHONE_STATE);

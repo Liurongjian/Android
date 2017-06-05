@@ -45,11 +45,13 @@ public class AppManager {
     public List<Activity> mActivityList;
     //当前在前台的activity
     private Activity mCurrentActivity;
+    private EventBus eventBus;
 
     @Inject
-    public AppManager(Application application) {
+    public AppManager(Application application, EventBus eventBus) {
         this.mApplication = application;
-        EventBus.getDefault().register(this);
+        this.eventBus = eventBus;
+        this.eventBus.register(this);
     }
 
 
@@ -132,7 +134,7 @@ public class AppManager {
      * 释放资源
      */
     public void release() {
-        EventBus.getDefault().unregister(this);
+        eventBus.unregister(this);
         mActivityList.clear();
         mActivityList = null;
         mCurrentActivity = null;

@@ -27,6 +27,8 @@ dependencies {
     })
     compile rootProject.ext.dependencies["design"]
     compile project(':common')
+    compile project(':routermoduleA')
+    compile project(':routermoduleB')
     testCompile rootProject.ext.dependencies["junit"]
 
     annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]

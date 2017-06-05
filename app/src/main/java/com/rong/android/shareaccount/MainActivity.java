@@ -9,19 +9,18 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.arms.rong.router.IRouter;
 import com.rong.android.shareaccount.di.component.DaggerActivityComponent;
-import com.rong.android.shareaccount.http.UserService;
 import com.rong.common.arms.mvp.BaseActivity;
 import com.rong.common.utils.PermissionUtil;
 import com.rong.common.utils.Toasts;
-import com.tbruyelle.rxpermissions2.RxPermissions;
 
 import javax.inject.Inject;
 
 public class MainActivity extends BaseActivity {
 
 	@Inject
-	UserService userService;
+	IRouter router;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -39,35 +38,16 @@ public class MainActivity extends BaseActivity {
 			public void onClick(View view) {
 				Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 						.setAction("Action", null).show();
-
-//				String key = "2fc4d10375506a529265f447b0d1fa6d";
-//				userService.histDay(1, 10, 1, key)
-//						.subscribeOn(Schedulers.io())
-//						.observeOn(AndroidSchedulers.mainThread())
-//						.subscribe(new Consumer<ResponseBody<List<HistResult>>>() {
-//							@Override
-//							public void accept(@NonNull ResponseBody<List<HistResult>> listResponseBody) throws Exception {
-//								Gson gson = new Gson();
-//								DevUtil.d("lrj", listResponseBody == null ? "null" : gson.toJson(
-//										listResponseBody.getResult().get(0)));
-//							}
-//						});
-
-//				DevUtil.d("lrj", "sec name = " + user.getName() + "@" + user);
-//
-//				startActivity(new Intent(MainActivity.this, SecondActivity.class));
-
 				PermissionUtil.externalStorage(new PermissionUtil.RequestPermission() {
 					@Override
 					public void onRequestPermissionSuccess() {
 						Toasts.shortSuccess(MainActivity.this, "成功了");
-						startActivity(new Intent(MainActivity.this, SecondActivity.class));
+						Intent intent = router.findIntent(MainActivity.this, "/module/a/main", null);
+						startActivity(intent);
 					}
-				}, new RxPermissions(MainActivity.this), MainActivity.this);
+				}, MainActivity.this, MainActivity.this);
 			}
 		});
-
-
 	}
 
 	@Override

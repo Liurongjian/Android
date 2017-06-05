@@ -19,5 +19,4 @@ public class UtilModule {
 		return EventBus.getDefault();
 	}
 
-
 }

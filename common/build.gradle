@@ -66,4 +66,5 @@ dependencies {
     }
 
     compile rootProject.ext.dependencies["androideventbus"]
+    compile project(':router')
 }

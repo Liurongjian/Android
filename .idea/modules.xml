@@ -5,6 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/AndroidArms.iml" filepath="$PROJECT_DIR$/AndroidArms.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/router/router.iml" filepath="$PROJECT_DIR$/router/router.iml" />
+      <module fileurl="file://$PROJECT_DIR$/routermoduleA/routermoduleA.iml" filepath="$PROJECT_DIR$/routermoduleA/routermoduleA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/routermoduleB/routermoduleb.iml" filepath="$PROJECT_DIR$/routermoduleB/routermoduleb.iml" />
     </modules>
   </component>
 </project>
