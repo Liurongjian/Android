@@ -42,12 +42,12 @@ router().inject(RouterModule.class);
 ### 使用
 ```java
 Map<String, Object> params = new ArrayMap<>();
-				params.put("from", "南京");
-				params.put("user_id", user.getId());
-				params.put("to", "上海");
+params.put("from", "南京");
+params.put("user_id", user.getId());
+params.put("to", "上海");
 
-				Intent intent = router.findIntent(getActivity(), "/module/a/user", params);
-				startActivity(intent);
+Intent intent = router.findIntent(getActivity(), "/module/a/user", params);
+startActivity(intent);
 ```
 
 好了，现在你能愉快地使用router来在多个module之间跳转了，祝你使用愉快。
