@@ -1,6 +1,6 @@
 关于项目
 ======================
-在新达达那段时间，一直想重构公司的项目。可是需求跟得太紧了，一直没有时间。现在离职了，刚好可以趁这段空闲时期，整理在达达时期踩过的坑，学习新的技术。重新调整项目结构，集成当前流行的`retrofit` + `okhttp` + `dagger2` + `mvp` + `rxjava` [基础框架参考]:https://github.com/JessYanCoding/MVPArms
+在新达达那段时间，踩过很多坑。现在刚到新的环境，可以趁这段时间，整理下在达达时期踩过的坑，学习新的技术。重新调整项目结构，集成当前流行的`retrofit` + `okhttp` + `dagger2` + `mvp` + `rxjava` [基础框架参考]:https://github.com/JessYanCoding/MVPArms
 
 当然，还有我自己搭建的`router`页面路由框架，主要运用了注解与反射。
 
