@@ -3,6 +3,7 @@ package com.arms.rong.router;
 import android.app.Activity;
 
 import java.lang.annotation.ElementType;
+import java.lang.annotation.Inherited;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 

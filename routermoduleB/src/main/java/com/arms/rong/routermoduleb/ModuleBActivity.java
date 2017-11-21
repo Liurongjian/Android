@@ -7,7 +7,9 @@ import android.view.View;
 
 import com.arms.rong.router.IRouter;
 import com.arms.rong.routermoduleb.di.component.DaggerActivityComponent;
+import com.arms.rong.routermoduleb.http.UserService;
 import com.rong.common.utils.JsonUtil;
+import com.rong.common.utils.PermissionUtil;
 
 import javax.inject.Inject;
 
@@ -31,6 +33,7 @@ public class ModuleBActivity extends AppCompatActivity {
 				startActivity(intent);
 			}
 		});
+
 	}
 
 	private void readParams() {

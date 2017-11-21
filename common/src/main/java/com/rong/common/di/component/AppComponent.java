@@ -8,9 +8,11 @@ import com.rong.common.arms.lifecycle.AppManager;
 import com.rong.common.di.module.AppModule;
 import com.rong.common.di.module.HttpModule;
 import com.rong.common.di.module.UtilModule;
+import com.rong.common.utils.CrashReportUtil;
 import com.rong.common.utils.ProgressUtil;
 
-import org.simple.eventbus.EventBus;
+
+import org.greenrobot.eventbus.EventBus;
 
 import javax.inject.Singleton;
 
@@ -30,5 +32,6 @@ public interface AppComponent {
 	ProgressUtil progressUtil();
 	//路由
 	IRouter router();
-
+	//crash util
+	CrashReportUtil crashUtil();
 }

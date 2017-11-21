@@ -1,1 +1,1 @@
-include ':app', ':common', ':router', ':routermoduleA', ':routermoduleB'
+include ':app', ':common', ':router', ':routermoduleA', ':routermoduleB', ':monitor', ':X5WebDemo'

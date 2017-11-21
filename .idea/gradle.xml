@@ -8,8 +8,10 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/X5WebDemo" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/common" />
+            <option value="$PROJECT_DIR$/monitor" />
             <option value="$PROJECT_DIR$/router" />
             <option value="$PROJECT_DIR$/routermoduleA" />
             <option value="$PROJECT_DIR$/routermoduleB" />

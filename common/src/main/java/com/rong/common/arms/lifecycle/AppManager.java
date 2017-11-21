@@ -11,9 +11,10 @@ import android.view.View;
 
 import com.rong.common.utils.DevUtil;
 
-import org.simple.eventbus.EventBus;
-import org.simple.eventbus.Subscriber;
-import org.simple.eventbus.ThreadMode;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -58,7 +59,7 @@ public class AppManager {
     /**
      * 通过eventbus post事件,远程遥控执行对应方法
      */
-    @Subscriber(tag = APPMANAGER_MESSAGE, mode = ThreadMode.MAIN)
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onReceive(Message message) {
         switch (message.what) {
             case START_ACTIVITY:

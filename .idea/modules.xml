@@ -3,11 +3,13 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AndroidArms.iml" filepath="$PROJECT_DIR$/AndroidArms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/X5WebDemo/X5WebDemo.iml" filepath="$PROJECT_DIR$/X5WebDemo/X5WebDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/monitor/monitor.iml" filepath="$PROJECT_DIR$/monitor/monitor.iml" />
       <module fileurl="file://$PROJECT_DIR$/router/router.iml" filepath="$PROJECT_DIR$/router/router.iml" />
       <module fileurl="file://$PROJECT_DIR$/routermoduleA/routermoduleA.iml" filepath="$PROJECT_DIR$/routermoduleA/routermoduleA.iml" />
-      <module fileurl="file://$PROJECT_DIR$/routermoduleB/routermoduleb.iml" filepath="$PROJECT_DIR$/routermoduleB/routermoduleb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/routermoduleB/routermoduleB.iml" filepath="$PROJECT_DIR$/routermoduleB/routermoduleB.iml" />
     </modules>
   </component>
 </project>

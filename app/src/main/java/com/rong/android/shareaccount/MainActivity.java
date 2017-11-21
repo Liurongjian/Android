@@ -1,6 +1,5 @@
 package com.rong.android.shareaccount;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -8,14 +7,16 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.arms.rong.router.IRouter;
 import com.rong.android.shareaccount.di.component.DaggerActivityComponent;
 import com.rong.common.arms.mvp.BaseActivity;
 import com.rong.common.utils.PermissionUtil;
-import com.rong.common.utils.Toasts;
 
 import javax.inject.Inject;
+
+import es.dmoral.toasty.Toasty;
 
 public class MainActivity extends BaseActivity {
 
@@ -27,12 +28,12 @@ public class MainActivity extends BaseActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		BaseApplication application = (BaseApplication) getApplication();
+		BaseApplication application = BaseApplication.getInstance();
 		DaggerActivityComponent.builder().appComponent(application.getAppComponent()).build().inject(this);
 		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
 
-		FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+		final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 		fab.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
@@ -41,9 +42,9 @@ public class MainActivity extends BaseActivity {
 				PermissionUtil.externalStorage(new PermissionUtil.RequestPermission() {
 					@Override
 					public void onRequestPermissionSuccess() {
-						Toasts.shortSuccess(MainActivity.this, "成功了");
-						Intent intent = router.findIntent(MainActivity.this, "/module/a/main", null);
-						startActivity(intent);
+//						Toasty.info(getApplication(), "ddd", Toast.LENGTH_SHORT).show();
+//						Toasts.shortSuccess(getApplication(), "哈哈，我被修复了");
+						Toasty.warning(getApplication(), "B_1 一个小错误", Toast.LENGTH_SHORT ,false).show();
 					}
 				}, MainActivity.this, MainActivity.this);
 			}

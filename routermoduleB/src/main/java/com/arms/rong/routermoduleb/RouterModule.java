@@ -7,6 +7,7 @@ import android.os.PersistableBundle;
 import android.util.Size;
 import android.util.SizeF;
 
+import com.arms.rong.router.NotNull;
 import com.arms.rong.router.Path;
 import com.arms.rong.router.Query;
 import com.arms.rong.router.Target;
@@ -40,7 +41,9 @@ public interface RouterModule {
 	                      @Query("BooleanArray") boolean[] booleanArray,
 	                      @Query("ByteArray") byte[] byteArray,
 	                      @Query("ShortArray") short[] shortArray,
-	                      @Query("CharArray") char[] charArray,
+	                      @Query("CharArray")
+//			                      @NotNull //如果添加了NotNull的注解，则表示这个参数不能为空
+			                    char[] charArray,
 	                      @Query("IntArray") int[] intArray,
 	                      @Query("LongArray") long[] longArray,
 	                      @Query("FloatArray") float[] floatArray,

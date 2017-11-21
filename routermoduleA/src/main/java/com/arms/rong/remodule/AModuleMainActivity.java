@@ -10,6 +10,9 @@ import com.arms.rong.remodule.di.component.DaggerActivityComponent;
 import com.arms.rong.router.IRouter;
 import com.rong.common.arms.mvp.BaseActivity;
 
+
+import org.greenrobot.eventbus.EventBus;
+
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -19,6 +22,8 @@ public class AModuleMainActivity extends BaseActivity {
 
 	@Inject
 	IRouter router;
+	@Inject
+	EventBus eventBus;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +58,9 @@ public class AModuleMainActivity extends BaseActivity {
 				Intent intent = router.findIntent(AModuleMainActivity.this, "/module/b/main", params);
 				System.out.println("cost time = " + (SystemClock.currentThreadTimeMillis() - startTime));
 				startActivity(intent);
+				eventBus.register(this);
+				eventBus.post(this);
+				eventBus.unregister(this);
 			}
 		});
 	}

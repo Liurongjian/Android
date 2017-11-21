@@ -1,6 +1,9 @@
 package com.rong.common.di.module;
 
-import org.simple.eventbus.EventBus;
+
+import com.rong.common.utils.CrashReportUtil;
+
+import org.greenrobot.eventbus.EventBus;
 
 import javax.inject.Singleton;
 

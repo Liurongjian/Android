@@ -5,8 +5,8 @@ ext {
             buildToolsVersion: "25.0.2",
             minSdkVersion    : 19,
             targetSdkVersion : 25,
-            versionCode      : 101,
-            versionName      : "2.0.1",
+            versionCode      : 102,
+            versionName      : "2.0.2",
     ]
 
     version = [
@@ -65,7 +65,7 @@ ext {
             //tools
             "dagger2"                  : "com.google.dagger:dagger:${version["dagger2SdkVersion"]}",
             "dagger2-compiler"         : "com.google.dagger:dagger-compiler:${version["dagger2SdkVersion"]}",
-            "androideventbus"          : "org.simple:androideventbus:1.0.5.1",
+            "androideventbus"          : "org.greenrobot:eventbus:3.0.0",
             "gson"                     : "com.google.code.gson:gson:2.8.0",
             "multidex"                 : "com.android.support:multidex:1.0.1",
             "javax.annotation"         : "javax.annotation:jsr250-api:1.0",
@@ -82,5 +82,9 @@ ext {
             "timber"                   : "com.jakewharton.timber:timber:4.5.1",
 //            "canary-debug"             : "com.squareup.leakcanary:leakcanary-android:${version["canarySdkVersion"]}",
 //            "canary-release"           : "com.squareup.leakcanary:leakcanary-android-no-op:${version["canarySdkVersion"]}",
+
+            //bugly
+            "buglysdk"                 : "com.tencent.bugly:crashreport_upgrade:latest.release",
+            "buglyndk"                 : "com.tencent.bugly:nativecrashreport:latest.release",
     ]
 }
